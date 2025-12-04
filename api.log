@@ -1,0 +1,24 @@
+INFO 2025-12-04 11:58:49,254 autoreload Watching for file changes with StatReloader
+INFO 2025-12-04 12:03:07,970 basehttp "GET /api/orders HTTP/1.1" 301 0
+INFO 2025-12-04 12:03:08,002 basehttp "GET /api/orders/ HTTP/1.1" 200 1916
+INFO 2025-12-04 12:05:33,483 autoreload C:\Users\NARENDRA VURA\Music\assessment\restaurant_api\orders\urls.py changed, reloading.
+INFO 2025-12-04 12:05:34,039 autoreload Watching for file changes with StatReloader
+INFO 2025-12-04 12:05:48,339 basehttp "GET /api/orders/statistics/ HTTP/1.1" 200 432
+INFO 2025-12-04 12:06:11,725 basehttp "GET /api/orders/1 HTTP/1.1" 301 0
+WARNING 2025-12-04 12:06:11,732 log Not Found: /api/orders/1/
+WARNING 2025-12-04 12:06:11,732 basehttp "GET /api/orders/1/ HTTP/1.1" 404 37
+INFO 2025-12-04 12:06:22,095 basehttp "GET /api/orders/10 HTTP/1.1" 301 0
+INFO 2025-12-04 12:06:22,118 basehttp "GET /api/orders/10/ HTTP/1.1" 200 765
+INFO 2025-12-04 12:08:48,553 basehttp "GET /api/orders/11 HTTP/1.1" 301 0
+INFO 2025-12-04 12:08:48,565 basehttp "GET /api/orders/11/ HTTP/1.1" 200 1318
+INFO 2025-12-04 12:11:43,604 autoreload C:\Users\NARENDRA VURA\Music\assessment\restaurant_api\orders\urls.py changed, reloading.
+INFO 2025-12-04 12:11:44,388 autoreload Watching for file changes with StatReloader
+INFO 2025-12-04 12:35:06,521 autoreload Watching for file changes with StatReloader
+INFO 2025-12-04 12:35:10,535 basehttp "GET /api/orders/11 HTTP/1.1" 301 0
+INFO 2025-12-04 12:35:10,567 basehttp "GET /api/orders/11/ HTTP/1.1" 200 1318
+INFO 2025-12-04 12:35:33,699 basehttp "GET /api/orders/17 HTTP/1.1" 301 0
+INFO 2025-12-04 12:35:33,713 basehttp "GET /api/orders/17/ HTTP/1.1" 200 770
+INFO 2025-12-04 12:36:02,521 basehttp "GET /api/orders/15 HTTP/1.1" 301 0
+INFO 2025-12-04 12:36:02,532 basehttp "GET /api/orders/15/ HTTP/1.1" 200 516
+INFO 2025-12-04 12:38:23,856 autoreload C:\Users\NARENDRA VURA\Music\assessment\restaurant_api\orders\views.py changed, reloading.
+INFO 2025-12-04 12:38:24,446 autoreload Watching for file changes with StatReloader

@@ -1,0 +1,268 @@
+{
+  "info": {
+    "name": "Restaurant Order Management API",
+    "description": "Complete API collection for restaurant order system with payment details",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Get All Orders (Paginated)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", ""]
+            },
+            "description": "Retrieves a paginated list of all orders with basic information including order totals and payment counts."
+          }
+        },
+        {
+          "name": "Get Order Details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/10/",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "10", ""]
+            },
+            "description": "Get complete details for a specific order including all items, prices, quantities, and all payment transactions."
+          }
+        },
+        {
+          "name": "Get Orders with Pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/?page=1&page_size=5",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", ""],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "page_size",
+                  "value": "5"
+                }
+              ]
+            },
+            "description": "Get orders with custom pagination settings."
+          }
+        },
+        {
+          "name": "Filter by Date",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/?date=2025-10-01",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", ""],
+              "query": [
+                {
+                  "key": "date",
+                  "value": "2025-10-01"
+                }
+              ]
+            },
+            "description": "Filter orders by specific date."
+          }
+        },
+        {
+          "name": "Filter by Date Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/?date_from=2025-10-01&date_to=2025-10-05",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", ""],
+              "query": [
+                {
+                  "key": "date_from",
+                  "value": "2025-10-01"
+                },
+                {
+                  "key": "date_to",
+                  "value": "2025-10-05"
+                }
+              ]
+            },
+            "description": "Filter orders within a date range."
+          }
+        },
+        {
+          "name": "Filter by Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/?status=Completed",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", ""],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "Completed"
+                }
+              ]
+            },
+            "description": "Filter orders by status (Completed, Pending, etc.)."
+          }
+        },
+        {
+          "name": "Search Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/search/?q=10",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "search", ""],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "10"
+                }
+              ]
+            },
+            "description": "Search orders by order ID."
+          }
+        },
+        {
+          "name": "Search by Amount Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/search/?min_amount=20&max_amount=50",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "search", ""],
+              "query": [
+                {
+                  "key": "min_amount",
+                  "value": "20"
+                },
+                {
+                  "key": "max_amount",
+                  "value": "50"
+                }
+              ]
+            },
+            "description": "Search orders within a specific amount range."
+          }
+        },
+        {
+          "name": "Search by Payment Type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/search/?payment_type=Card",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "search", ""],
+              "query": [
+                {
+                  "key": "payment_type",
+                  "value": "Card"
+                }
+              ]
+            },
+            "description": "Filter orders by payment type (Card, Cash, UPI)."
+          }
+        },
+        {
+          "name": "Search by Payment Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/search/?payment_status=Completed",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "search", ""],
+              "query": [
+                {
+                  "key": "payment_status",
+                  "value": "Completed"
+                }
+              ]
+            },
+            "description": "Filter orders by payment status."
+          }
+        },
+        {
+          "name": "Complex Search",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/search/?payment_type=Card&min_amount=20&payment_status=Completed",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "search", ""],
+              "query": [
+                {
+                  "key": "payment_type",
+                  "value": "Card"
+                },
+                {
+                  "key": "min_amount",
+                  "value": "20"
+                },
+                {
+                  "key": "payment_status",
+                  "value": "Completed"
+                }
+              ]
+            },
+            "description": "Combine multiple search filters."
+          }
+        },
+        {
+          "name": "Get Order Statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/orders/statistics/",
+              "protocol": "http",
+              "host": ["127", "0", "0", "1"],
+              "port": "8000",
+              "path": ["api", "orders", "statistics", ""]
+            },
+            "description": "Get comprehensive statistics including total orders, revenue, average order value, status breakdown, and payment method breakdown."
+          }
+        }
+      ]
+    }
+  ]
+}
